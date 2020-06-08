@@ -31,5 +31,16 @@ operation Qubits_Demo () : Unit {
         Message("State |-i⟩:");
         DumpMachine();
         Message(divider);
+
+        //This will put the qubit into an uneven superposition
+        // The amplitudes of |0⟩ and |1⟩ have different moduli
+        Rx(2.0, q);
+        Ry(1.0, q);
+
+        Message("Uneven superposition state:");
+        DumpMachine();
+
+        //This line returns the qubit to state |0⟩
+        Reset(q);
     }
 }
