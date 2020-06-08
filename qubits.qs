@@ -18,5 +18,18 @@ operation Qubits_Demo () : Unit {
         DumpMachine();
         Message(divider);
 
+        //This line puts the qubit into a superposition
+        // State |-⟩ = (1/sqrt(2))(|0⟩ - |1⟩)
+        H(q);
+        Message("State |-⟩:");
+        DumpMachine();
+        Message(divider);
+
+        //This line changes the qubit to state |-i⟩ 
+        // (1/sqrt(2))(|0⟩ - i|1⟩)
+        S(q);
+        Message("State |-i⟩:");
+        DumpMachine();
+        Message(divider);
     }
 }
